@@ -29,7 +29,7 @@
 	<div id="layout_top">
 		
 		<div id="site_title">
-			<h1><a href="#">Pedro <span>Valencia</span></a></h1>
+			<h1><a href="index.html">Pedro <span>Valencia</span></a></h1>
 			<h2>Estudiante de Ingeniería Civil en Computación de la Universidad de Chile</h2>
 		</div>
 
@@ -61,8 +61,8 @@
 				<ul>
 					<li class="current_page_item"><a href="#cv">Curriculum Vitae</a></li>
 					<li><a href="#proyectos">Proyectos</a></li>
+					<li><a href="#calendario">Mi Calendario</a></li>
 					<!--
-					<li><a href="#">Third subpage</a></li>
 					<li><a href="#">And so on..</a></li>
 					-->
 				</ul>
@@ -86,7 +86,7 @@
 						<div class="post_body">
 							
 							<p>Mi Curriculum Vitae está siendo editado continuamente y se encuentra alojado en <a href="http://github.com">github</a> para llevar el control de las revisiones que le hago.</p>
-							<p>La versión a el 24 de agosto de 2009 se encuentra <a href="http://github.com/pvalencia/Curriculum-Vitae/raw/85f92ce9f2550438ed78a445b5b07ea4fecfee2f/cvpedrovalencia.pdf">acá</a></p>
+							<p>La versión a el 24 de agosto de 2009 se encuentra <a href="http://github.com/pvalencia/Curriculum-Vitae/raw/85f92ce9f2550438ed78a445b5b07ea4fecfee2f/cvpedrovalencia.pdf" rel="nofollow">acá</a></p>
 						
 						</div>
 						
@@ -97,7 +97,7 @@
 						-->
 
 					</div>
-
+					<hr />
 					<div class="post">
 						
 						<a name="proyectos"></a>
@@ -111,7 +111,12 @@
 							<p>Puedes ver mis proyectos Open Source en <a href="http://github.com/pvalencia">github</a>.</p>
 
 							<p>Además estoy permanentemente pegando código interesante en <a href="http://gist.github.com/pvalencia">gist.github</a>.</p>
-							
+
+							<p>Actualmente estoy trabajando en un proyecto para el <em>Taller de Usabilidad</em> de mi carrera. Mi proyecto intentará analizar la usabilidad y la inmersión del usuario en el juego. Este es un tema de mucho interés para mi.</p>
+
+							<p>Además en el ramo <em>Software Evolution</em> estaré en un proyecto para extender alguna funcionalidad de <a href="http://moose.unibe.ch">Moose</a> con el profeso <a href="http://www.bergel.eu">Alexandre Bergel</a>.</p>
+
+						
 						</div>
 						
 						<!--
@@ -120,8 +125,15 @@
 						</div>
 						-->
 
-					</div>	
-
+					</div>
+					<hr />
+					<div class="post">
+						<a name="calendario"></a>
+						<div class="post_title"><h2>Mi Calendario</h2></div>
+						<div class="post_body calendar" style="text-align: center;">
+						<iframe src="http://www.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;height=500&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=pvalencia%40gmail.com&amp;color=%230D7813&amp;ctz=America%2FSantiago" style=" border-width:0; text-align: center; " width="550" height="500" frameborder="0" scrolling="no"></iframe>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -133,9 +145,9 @@
 						<div class="box_title">About</div>
 						<div class="box_content">
 							<p>Estudiante de Ingeniería Civil en Computación de la Universidad de Chile. <a href="http://www.cakephp.org">Cakero</a> y <a href="http://www.jquery.com">jQueriero</a>.</p>
-						</div>
-						<div class="box_content" style="text-align: center;">
+							<div style="text-align: center;">
 							<img src="img/perfil.jpg" />
+							</div>
 						</div>
 
 					</div>
@@ -163,8 +175,6 @@
 						<div class="box_content">
 							<ul>
 								<li><a href="http://templates.arcsin.se/">Arcsin Web Templates</a></li>
-								<li><a href="http://moose.unibe.ch/">Moose</a> - Software Analysis and Information Visualization</li>
-								<li><a href="http://cakephp.org/">CakePHP</a> - PHP Framework</li>
 								<li><a href="http://www.dcc.uchile.cl/~pvalenci/pvalencia.asc">PGP public key</a> - Mi llave pública</li>
 								<li><a href="http://github.com/pvalencia/pvalencia.github.com/">Esta página</a> - El código fuente de esta página.</a></li>
 							</ul>
@@ -195,6 +205,16 @@
 
 					</div>
 -->
+					<div class="box">
+						<div class="box_title">Frase Cliché</div>
+
+						<div class="box_content">
+							<blockquote cite="George Bernard Shaw">
+								<p>"Si tú tienes una manzana y yo tengo una manzana e intercambiamos las manzanas, entonces tanto tú como yo seguiremos teniendo una manzana. Pero si tú tienes una idea y yo tengo una idea e intercambiamos ideas, entonces ambos tendremos dos ideas."</p>
+								<ul style="text-align: right;"><li>George Bernard Shaw</li></ul>
+							</blockquote>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -203,19 +223,14 @@
 		</div>
 
 		<div id="dashboard">
-		<!--
 			<div id="dashboard_inner">
 
 				<div class="col3 left">
 					<div class="col3_content">
 
-						<div class="col_title">Tincidunt</div>
+						<div class="col_title">Proyectos</div>
 						<ul>
-							<li><a href="#">Consequat molestie</a></li>
-							<li><a href="#">Sem justo</a></li>
-							<li><a href="#">Semper eros</a></li>
-							<li><a href="#">Magna sed purus</a></li>
-							<li><a href="#">Tincidunt morbi</a></li>
+							<li><a href="http://github.com/pvalencia/twitter-cakephp-component/tree">twitter-cakephp-component</a></li>
 						</ul>
 
 					</div>
@@ -224,13 +239,11 @@
 				<div class="col3mid left">
 					<div class="col3_content">
 
-						<div class="col_title">Fermentum</div>
+						<div class="col_title">Redes Sociales</div>
 						<ul>
-							<li><a href="#">Semper fermentum</a></li>
-							<li><a href="#">Sem justo</a></li>
-							<li><a href="#">Magna sed purus</a></li>
-							<li><a href="#">Tincidunt nisl</a></li>
-							<li><a href="#">Consequat molestie</a></li>
+							<li><a href="http://twitter.com/pvalencia">Twitter</a></li>
+							<li><a href="http://delicious.com/pvalencia">del.icio.us</a></li>
+							<li><a href="http://github.com/pvalencia">GitHub</a></li>
 						</ul>
 
 					</div>
@@ -239,13 +252,12 @@
 				<div class="col3 right">
 					<div class="col3_content">
 
-						<div class="col_title">Praesent</div>
+						<div class="col_title">Páginas de Interés</div>
 						<ul>
-							<li><a href="#">Semper lobortis</a></li>
-							<li><a href="#">Consequat molestie</a></li>
-							<li><a href="#">Magna sed purus</a></li>
-							<li><a href="#">Sem morbi</a></li>
-							<li><a href="#">Tincidunt sed</a></li>
+							<li><a href="http://www.cakephp.org">CakePHP</a></li>
+							<li><a href="http://www.jquery.com">jQuery</a></li>
+							<li><a href="http://GitHub.com">github</a></li>
+							<li><a href="http://moose.unibe.ch/">Moose</a></li>
 						</ul>
 
 					</div>
@@ -254,7 +266,6 @@
 				<div class="clearer">&nbsp;</div>
 
 			</div>
-		-->
 		</div>
 
 	</div>
@@ -263,7 +274,7 @@
 	<div id="footer">
 
 		<div class="left">
-			&copy; 2009 Website.com - Your Website Slogan
+			&copy; 2009 pvalencia.github.com - Pedro Valencia
 		</div>
 		<div class="right">
 			<a href="http://templates.arcsin.se/">Website template</a> by <a href="http://arcsin.se/">Arcsin</a> 
@@ -275,6 +286,17 @@
 
 </div>
 </div>
+
+<!-- Google analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10389405-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
 
 </body>
 </html>
