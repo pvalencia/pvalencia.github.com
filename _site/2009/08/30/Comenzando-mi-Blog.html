@@ -43,8 +43,8 @@
 			<div id="nav1">
 
 				<ul>
-					<li{% if page.title == 'Home' %} class="current_page_item"{% endif %}><a href="/index.html">Home</a></li>
-					<li{% if page.title == 'Blog' %} class="current_page_item"{% endif %}><a href="/blog.html">Blog</a></li>
+					<li><a href="/index.html">Home</a></li>
+					<li><a href="/blog.html">Blog</a></li>
 				</ul>
 
 				<div class="clearer">&nbsp;</div>
@@ -53,16 +53,8 @@
 
 			<div id="nav2">
 				<ul>
-				{% if page.title == 'Home' %}
-					<li><a href="#cv">Curriculum Vitae</a></li>
-					<li><a href="#proyectos">Proyectos</a></li>
-					<li><a href="#calendario">Mi Calendario</a></li>
-				{% endif %}
-				{% if page.title == 'Blog' %}
-					{% for post in site.posts limit:4 %}
-					<li><a href="#{{post.title}}">{{post.title}}</a></li>
-					{% endfor %}
-				{% endif %}
+				
+				
 				</ul>
 				<div class="clearer">&nbsp;</div>
 			</div>
@@ -73,7 +65,24 @@
 
 			<div class="left" id="content_outer">
 				<div id="content">
-				{{ content }}
+				<div class="post">
+
+	<div class="post_title"><h2><a href="/2009/08/30/Comenzando-mi-Blog.html">Comenzando mi Blog</a></h2></div>
+	<div class="post_date">Posteado: 30 Aug 2009</div>
+	
+	<div class="post_body">
+		
+<p>Creo que voy a iniciar un blog sobre como avanzo en mis proyectos. Por el momento sólo probaré jekyll en github.</p>
+					
+	</div>
+	
+	
+
+</div>
+
+
+
+
 				</div>
 			</div>
 

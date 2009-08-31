@@ -1,20 +1,22 @@
 ---
 layout: default
 ---
+<div class="post">
 
-					<div class="post">
+	<div class="post_title"><h2><a href="{{ page.url }}">{{ page.title }}</a></h2></div>
+	<div class="post_date">Posteado: {{ page.date | date_to_string }}</div>
+	
+	<div class="post_body">
+		{{content}}					
+	</div>
+	
+	{% if false %}
+	<div class="post_meta">
+		<a href="#">5 comments</a> | Tagged: <a href="#">Sapien</a>, <a href="#">Sollicitudin</a>, <a href="#">Ligula</a>
+	</div>
+	{% endif %}
 
-						<div class="post_title"><h2><a href="{{page.url}}">{{page.title}}</a></h2></div>
-						<div class="post_date">Postiado el {{page.date | date_to_string}}</div>
-						
-						<div class="post_body">
-							{{ content }}
-						</div>
-						
-						{% if false %}
-						<div class="post_meta">
-							<a href="#">5 comments</a> | Tagged: <a href="#">Sapien</a>, <a href="#">Sollicitudin</a>, <a href="#">Ligula</a>
-						</div>
-						{% endif %}
+</div>
 
-					</div>
+
+
