@@ -58,11 +58,6 @@
 					<li><a href="#proyectos">Proyectos</a></li>
 					<li><a href="#calendario">Mi Calendario</a></li>
 				{% endif %}
-				{% if page.title == 'Blog' %}
-					{% for post in site.posts limit:4 %}
-					<li><a href="#{{post.title}}">{{post.title}}</a></li>
-					{% endfor %}
-				{% endif %}
 				</ul>
 				<div class="clearer">&nbsp;</div>
 			</div>
