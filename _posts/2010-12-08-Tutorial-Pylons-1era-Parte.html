@@ -1,0 +1,127 @@
+---
+layout: post
+title: Tutorial de Pylons 1era Parte
+---
+
+<h2>Ambiente Virtual (virtualenv)</h2>
+
+<p>La mejor forma de trabajar en pylons es mediante <a href="http://bitbucket.org/ianb/virtualenv/raw/204f249efc32/virtualenv.py" title="virtualenv.py del 20/09/2010">virtualenv</a>. <!-- Explicación de virtualenv --></p>
+
+<p>Para iniciar un entorno virtual libre de todos los paquetes que hayamos instalado anteriormente en nuestro sistema, debemos correr el script recientemente bajado:</p>
+
+{% highlight bash %}
+$ python virtualenv.py --no-site-packages [NOMBRE]
+{% endhighlight %}
+
+<p>De esta forma tendremos un ambiente de python definido en la carpeta <em>[NOMBRE]</em> (desde ahora <em>devenv</em>). Podemos ahor usar python mediante:</p>
+
+{% highlight bash %}
+$ devenv/bin/python
+Python 2.6.6 (r266:84292, Sep 15 2010, 16:22:56) 
+[GCC 4.4.5] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+{% endhighlight %}
+
+<p>o utilizando el comando source:</p>
+
+{% highlight bash %}
+$ source devenv/bin/activate
+$ python
+Python 2.6.6 (r266:84292, Sep 15 2010, 16:22:56)
+[GCC 4.4.5] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+{% endhighlight %}
+
+<p>Vamos a asumir que usamos el comando <em>source</em>.</p>
+
+<h2>Instalando Pylons</h2>
+
+<p>Para instalar pylons utilizaremos <em>easy_install</em> de forma usual pero sin utilizar poderes de superusuario.</p>
+
+{% highlight bash %}
+$ easy_install Pylons==1.0
+{% endhighlight %}
+
+<p>Realizando esto tendremos instalado en nuestro entorno el comando <em>paster</em> que nos permite crear el proyecto, levantar un servidor de desarrollo, crear un egg, etc. (<a href="http://pythonpaste.org/" title="Página Oficial">más info</a>).</p>
+
+<h3>Creando el proyecto</h3>
+
+<p>Para crear el proyecto utilizaremos el comando <em>paster</em>:</p>
+
+{% highlight bash %}
+$ paster create --template=pylons SimpleBlog
+{% endhighlight %}
+
+<p>Paster nos ofrece el comando <em>create</em> que obviamente crea un proyecto con un cierto template especificado por <em>--template=pylons</em> y un nombre que en este caso es <em>SimpleBlog</em>. Nos preguntará si deseamos usar <a href="http://www.makotemplates.org/" title="Página oficial de Mako">Mako Templates</a>, pondremos la opción por defecto, y <a href="http://www.sqlalchemy.org/" title="Página oficial de SqlAlchemy">SqlAlchemy</a>, en este caso escribimos <em>True</em>. Ahora estamos listos para comenzar a desarrollar el proyecto.</p>
+
+<h4>Mako y SqlAlchemy</h4>
+
+<p><strong>Mako</strong> es un sistema de templates hecho y basado en python que nos permite facilmente separar la capa de visualización de la lógica de negocios. Es la biblioteca de template de Pylons por defecto, pero se puede utilizar cualquiera de las existentes.</p>
+
+<p><strong>SqlAlchemy</strong> es la biblioteca por excelencia de python para manejar bases de datos, tiene muchas características interesantes. Puede ser reemplaza por otra en un proyecto de Pylons, pero realmente es recomendable usarla.</p>
+
+<h3>Estructura del proyecto</h3>
+
+<p>Pylons al igual que todos los frameworks de desarrollo web tiene una estructura de directorios para el desarrollo.</p>
+
+{% highlight bash %}
+|-- development.ini
+|-- setup.py
+|-- simpleblog
+|   |-- config
+|   |   |-- deployment.ini_tmpl
+|   |   |-- environment.py
+|   |   |-- __init__.py
+|   |   |-- middleware.py
+|   |   `-- routing.py
+|   |-- controllers
+|   |   |-- error.py
+|   |   `-- __init__.py
+|   |-- __init__.py
+|   |-- lib
+|   |   |-- app_globals.py
+|   |   |-- base.py
+|   |   |-- helpers.py
+|   |   `-- __init__.py
+|   |-- model
+|   |   |-- __init__.py
+|   |   `-- meta.py
+|   |-- public
+|   |   |-- bg.png
+|   |   |-- favicon.ico
+|   |   |-- index.html
+|   |   `-- pylons-logo.gif
+|   |-- templates
+|   |-- tests
+|   |   |-- functional
+|   |   |   `-- __init__.py
+|   |   |-- __init__.py
+|   |   `-- test_models.py
+|   `-- websetup.py
+|-- SimpleBlog.egg-info
+`-- test.ini
+{% endhighlight %}
+
+<p>Casi todo el desarrollo se realizará en la carpeta simpleblog, por lo que la estructura de esta es de gran importancia.</p>
+
+<p>Dado que <em>paster</em> nos da una estructura estandar de un paquete python, podemos usar sus ventajas. La más interesante, <em>buildutils</em>, y la posibilidad de llamar al comando:
+
+{% highlight bash %}
+$ python setup.py develop
+{% endhighlight %}
+
+<p>que nos implementa todo el ambiente de desarrollo necesario, en esta caso instalar <em>SqlAlchemy</em>.</p>
+
+<p>A esta altura es posible ya verificar que nuestro proyecto funciona, utilizando el servidor de desarrollo que nos facilita <em>paster</em> mediante el comando:</p>
+
+{% highlight bash %}
+$ paster serve --reload development.ini
+Starting subprocess with file monitor
+Starting server in PID 4284.
+serving on http://127.0.0.1:5000
+{% endhighlight %}
+
+
+<h2>Continuará...</h2>
